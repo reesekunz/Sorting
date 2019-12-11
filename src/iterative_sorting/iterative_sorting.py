@@ -27,8 +27,8 @@ def selection_sort(Array):
     return Array
 
 
-Array = [3, 2, 4, 1]
-print("Selection sort", selection_sort(Array))
+#Array = [3, 2, 4, 1]
+#print("Selection sort", selection_sort(Array))
 
 
 # Bubble sort - Compare first pair of elements. If right value > left value, swap. Else, do nothing.
@@ -65,8 +65,8 @@ def bubble_sort(Array):
     return Array
 
 
-Array = [3, 2, 4, 1]
-print("Bubble sort", bubble_sort(Array))
+#Array = [3, 2, 4, 1]
+#print("Bubble sort", bubble_sort(Array))
 
 
 # STRETCH: implement the Count Sort function below
