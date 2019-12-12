@@ -13,16 +13,15 @@
 
 
 def selection_sort(Array):
-    # outer loop - goes from 0 to second to last item in list
-    for x in range(0, (len(Array) - 1)):
-        currentMinIndex = x
-        # inner loop - iterates through unsorted part of outer loop
-        for valueToRight in range(x+1, len(Array)):
-            if Array[valueToRight] < Array[currentMinIndex]:  # save index of min item and compare
-                currentMinIndex = valueToRight
-        if currentMinIndex != x:
-            # swap value into correct place (if needed)
-            Array[x], Array[currentMinIndex] = Array[currentMinIndex], Array[x]
+     # Outer loop tells us to continue iterating over array until everything is sorted in correct order
+    for x in range(0, (len(Array) - 1)):  # -1 since we start at index 0
+        # print("Array x", Array)
+        # Inner loop is the "function" we are having the loop do to compare values when the array is being looped through
+        for y in range(x+1, len(Array)):  # x+1 to check the index value to the right of x
+            # print("Array y", Array)
+            # Compare values - if value to the right (y) is smaller, then swap x and y indexes
+            if Array[y] < Array[x]:
+                Array[x], Array[y] = Array[y], Array[x]
 
     return Array
 
@@ -55,9 +54,12 @@ def selection_sort(Array):
 #4   [1, 2, 3, 4]
 
 def bubble_sort(Array):
-    for x in range(0, (len(Array)-1)):  # outer loop
-        # inner loop (the last item in the list is already sorted so can do - x)
-        for y in range(0, (len(Array)-1-x)):
+    # Outer loop tells us to continue iterating over array until everything is sorted in correct order
+    for x in range(0, (len(Array)-1)):  # -1 since we start at index 0
+       # print("Array x", Array)
+        # Inner loop is the "function" we are having the loop do to compare values when the array is being looped through
+        for y in range(0, (len(Array)-1-x)):  # -x because "x" is the number of time the array has been looped through, so we know that x (the max value in the last index since it got bubbled) is already correctly sorted and can be subtracted from the length
+           # print("Array y", Array)
             # compare value (y) to value on right(y +1). if value on left is larger, swap places
             if Array[y] > Array[y+1]:
                 Array[y], Array[y+1] = Array[y+1], Array[y]
