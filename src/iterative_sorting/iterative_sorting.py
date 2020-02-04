@@ -16,7 +16,7 @@
 
 
 def selection_sort(arr):
-    for x in range(0, len(arr) - 1):  # -1 since we start at index 0
+    for x in range(0, len(arr) - 1):  # -1 since last number will already be sorted
         print("selection sort arr", arr)
         print("selection sort outer loops", x)
         # cur_index = x (?)
